@@ -50,7 +50,7 @@ def categorize_sentiment(score, rating):
     if score > 0.05:  # positive sentiment score 
          if rating >= 4:
             return 'Positive'
-         elif rating == 4:
+         elif rating == 3:
             return 'Mixed Positive'
          else:
             return 'Mixed Negative'
@@ -101,5 +101,5 @@ customer_reviews_df['SentimentBucket'] = (
 print(customer_reviews_df.head())
 
 # saving the df with sentiment score, categories, and buckets to new csv file
-customer_reviews_df.to_csv('fact_customer_reviews_with_sentiments.csv', index=False)
+customer_reviews_df.to_csv('fact_customer_reviews_with_sentiment.csv', index=False)
 
